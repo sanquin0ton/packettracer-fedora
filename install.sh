@@ -11,11 +11,12 @@ Green="\033[0;32m"
 installer_name_1=CiscoPacketTracer*Ubuntu_64bit.deb
 installer_name_2=Cisco_*.deb
 installer_name_3=Packet_Tracer*.deb
+installer_name_4=CiscoPacketTracer*_amd64_signed.deb
 localized_installers=()
 selected_installer=''
 
 c=1
-for installer in $(find /home -type f -name $installer_name_1 -o -name $installer_name_2 -o -name $installer_name_3); do
+for installer in $(find /home -type f -name $installer_name_1 -o -name $installer_name_2 -o -name $installer_name_3 -o -name $installer_name_4); do
   echo $installer
   localized_installers[$c]=$installer
   ((c++))
